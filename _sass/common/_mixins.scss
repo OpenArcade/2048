@@ -1,0 +1,35 @@
+// We use this to prevent styles from being loaded multiple times for components that rely on other components.
+$modules: () !default;
+@mixin once($name) {
+	$module_index: index($modules, $name);
+	@if (($module_index == null) or ($module_index == false)) {
+		$modules: append($modules, $name);
+		@content;
+	}
+}
+
+
+// This applies styles for any of the states of an active modal.
+@mixin modalIsActive() {
+	.is-gameOver &,
+	.is-menuOpen & {
+		@content;
+	}
+}
+
+// Converts HSL to RGB.
+// @param {color} $hsl-color
+// @returns {color} - in HEX format
+@function hsl-to-rgb($hsl-color) {
+	@return mix($hsl-color, $hsl-color);
+}
+
+// Accessibility mindful hover state
+@mixin hover() {
+	&:hover,
+	&:focus,
+	&:active {
+		outline: 0;
+		@content;
+	}
+}

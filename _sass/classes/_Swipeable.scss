@@ -1,0 +1,26 @@
+//
+// Swipeable
+//
+
+@import "../global";
+
+@include once('Swipeable') {
+
+	.Swipeable {
+		height: 100vh;
+		padding: 10px;
+		display: flex;
+		flex-direction: row-reverse;
+		transition: filter .5s;
+
+		@include modalIsActive {
+			filter: blur(15px);
+		}
+
+		@media #{$mq-portrait} {
+			flex-direction: column;
+			justify-content: space-around;
+			padding-bottom: 70px;
+		}
+	}
+}

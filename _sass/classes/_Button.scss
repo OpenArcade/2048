@@ -1,0 +1,40 @@
+//
+// Button
+//
+
+@import "../global";
+
+@include once('Button') {
+
+	button {
+		font-size: 1rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #fff;
+		background: #444;
+		display: inline-block;
+		padding: 1.25em 1.5em;
+		margin: .25rem;
+		border: 0;
+		border-radius: 3px;
+		cursor: pointer;
+		transition: background .2s;
+
+		@include hover {
+			background-color: lighten(#444, 5);
+		}
+
+		@each $color in $colors {
+			$color-name: nth($color, 1);
+			$color-value: nth($color, 2);
+			&.u-#{$color-name} {
+				color: #fff;
+				background-color: $color-value;
+
+				@include hover {
+					background-color: lighten($color-value, 5);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+//
+// Utilities
+//
+
+@import "../global";
+
+@include once('Utilities') {
+
+	.u-position {
+		@each $x in $rows {
+			@each $y in $rows {
+				&#{$x}x#{$y} {
+					transform: translate($x*100%, $y*100%);
+				}
+			}
+		}
+	}
+
+	@each $value in $values {
+		$i: index($values, $value);
+		[data-value="#{$value}"] {
+			@if $value > 9999 {
+				font-size: 7vmin;
+			} @else if $value > 999 {
+				font-size: 8vmin;
+			} @else if $value > 99 {
+				font-size: 11vmin;
+			} @else if $value > 9 {
+				font-size: 13vmin;
+			}
+			background: hsl-to-rgb(hsl((($i/14)*360), 90%, 60%));
+		}
+	}
+}

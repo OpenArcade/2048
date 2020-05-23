@@ -1,0 +1,77 @@
+//
+// Scoreboard
+//
+
+@import "../global";
+
+@include once('Scoreboard') {
+
+	.Score {
+		margin: .5em 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		align-content: flex-start;
+
+		&-card {
+			flex-grow: 3;
+			font-size: 16px;
+			text-align: center;
+			text-transform: uppercase;
+			width: 150px;
+			padding: 2vmin;
+			margin: .25rem;
+			color: #fff;
+			background-color: $blue;
+			border-radius: $border-radius;
+
+			&--best {
+				background-color: $navy;
+			}
+
+			&-value {
+				display: block;
+				font-size: 2rem;
+
+//				&--1 {
+//					font-size: 1rem;
+//				}
+//				&--2 {
+//					font-size: 2rem;
+//				}
+//				&--3 {
+//					font-size: .8rem;
+//				}
+//				&--4 {
+//					font-size: .7rem;
+//				}
+//				&--5 {
+//					font-size: .6rem;
+//				}
+//				&--6 {
+//					font-size: .5rem;
+//				}
+			}
+		}
+
+		button {
+			flex-grow: 1;
+		}
+
+		@media #{$mq-landscape} {
+			flex-grow: 1;
+			align-items: flex-start;
+			margin: 0 .5em;
+			padding: 1vmin 0;
+
+//			@media (max-aspect-ratio: 920/520) {
+//
+//				&-card {
+//					display: block;
+//					width: 100%;
+//					margin: 0 0 1vmin;
+//				}
+//			}
+		}
+	}
+}

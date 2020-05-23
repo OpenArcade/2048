@@ -1,0 +1,53 @@
+//
+// Variables
+//
+
+// fonts
+$font-size: 16px;
+$font-family: 'Montserrat', sans-serif;
+$base-font: normal $font-size $font-family;
+
+// styles
+$border-radius: 1vmin;
+
+// media queries
+$mq-portrait: "only screen and (orientation: portrait)";
+$mq-landscape: "only screen and (orientation: landscape)";
+
+// grid
+$rows: 0 1 2 3;
+
+// score
+$values: 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192 16384;
+
+
+// colors
+
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #71f43d;
+$olive: #3D9970;
+$lime:  #01FF70;
+$yellow:  #FFDC00;
+$orange:  #f48b3d;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+
+$colors:
+	'aqua'      $aqua,
+	'blue'      $blue,
+	'navy'      $navy,
+	'teal'      $teal,
+	'green'     $green,
+	'olive'     $olive,
+	'lime'      $lime,
+	'yellow'    $yellow,
+	'orange'    $orange,
+	'red'       $red,
+	'fuchsia'   $fuchsia,
+	'purple'    $purple,
+	'maroon'    $maroon;

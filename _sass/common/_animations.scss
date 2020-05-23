@@ -1,0 +1,38 @@
+//
+// Animations
+//
+
+@import "../global";
+
+@include once('Animations') {
+
+	@keyframes newBounce {
+		0% {
+			transform: scale(0);
+		}
+		50% {
+			transform: scale(1.05);
+		}
+		75% {
+			transform: scale(.95);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	@keyframes mergeBounce {
+		0% {
+			transform: scale(1);
+		}
+		33% {
+			transform: scale(1.05);
+		}
+		66% {
+			transform: scale(.95);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+}

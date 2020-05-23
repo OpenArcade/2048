@@ -1,0 +1,18 @@
+//
+// Base
+//
+
+@import "../global";
+
+@include once('Base') {
+
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+
+	html, body {
+		font: $base-font;
+		margin: 0;
+		padding: 0;
+	}
+}

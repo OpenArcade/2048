@@ -1,0 +1,35 @@
+//
+// GameBoard
+//
+
+@import "../global";
+
+@include once('GameBoard') {
+
+	.GameBoard {
+		position: relative;
+		width: calc(100vmin - 20px);
+		height: calc(100vmin - 20px);
+		user-select: none;
+		pointer-events: none;
+
+		&-backgroundCard {
+			display: inline-block;
+			padding: 12.5%;
+			width: 25%;
+			position: relative;
+
+			&:before {
+				content: '';
+				display: block;
+				background: #eee;
+				border-radius: $border-radius;
+				position: absolute;
+				top: 4%;
+				left: 4%;
+				right: 4%;
+				bottom: 4%;
+			}
+		}
+	}
+}

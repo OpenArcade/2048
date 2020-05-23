@@ -1,0 +1,47 @@
+//
+// Card
+//
+
+@import "../global";
+
+@include once('Card') {
+
+	.Card {
+		font-weight: bold;
+		font-size: 32px;
+		font-size: 15vmin;
+		line-height: 32px;
+		padding: calc(46% - 16px) 0;
+		margin: 4%;
+		border-radius: $border-radius;
+		color: #fff;
+		background: red;
+		display: block;
+		transform-origin: 50% 50%;
+		transition: background .25s;
+
+		&-wrap {
+			display: block;
+			width: 25%;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transition: transform .15s;
+		}
+
+		&:before {
+			content: attr(data-value);
+		}
+
+		&.is-new {
+			animation: newBounce ease .5s;
+			animation-iteration-count: 1;
+		}
+
+		&.is-merged {
+			animation: mergeBounce ease .15s;
+			animation-iteration-count: 1;
+		}
+	}
+}

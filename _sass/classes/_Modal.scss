@@ -1,0 +1,42 @@
+//
+// Modal
+//
+
+@import "../global";
+
+@include once('Modal') {
+
+	.Modal {
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+		justify-content: center;
+		padding: 20px;
+		color: #444;
+		background-color: rgba(238, 238, 238, 0.9);
+		border-radius: $border-radius;
+		position: absolute;
+		top: 4vmin;
+		left: 4vmin;
+		right: 4vmin;
+		bottom: 4vmin;
+		z-index: -1;
+		opacity: 0;
+		transition: opacity .5s;
+
+		h2 {
+			font-size: 5vmin;
+			margin: 0 0 .5em;
+		}
+
+		p {
+			font-size: 8vmin;
+			margin: 0 0 1em;
+		}
+
+		@include modalIsActive {
+			opacity: 1;
+			z-index: 999;
+		}
+	}
+}
